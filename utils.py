@@ -62,7 +62,7 @@ def base_css():
         text-align: center;
     }
     .metric-label { color: #7c3aed; font-size: 0.82rem; font-weight: 600; margin-bottom: 6px; }
-    .metric-value { color: #1e1b4b; font-size: 1.6rem; font-weight: 900; }
+    .metric-value { color: #1e1b4b; font-size: 1.3rem; font-weight: 900; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .comment-card {
         background: #fafafa;
         border-left: 4px solid #a855f7;

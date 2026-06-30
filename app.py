@@ -42,7 +42,13 @@ if run:
     # 썸네일 미리보기
     thumb_url = f"https://img.youtube.com/vi/{video_id}/hqdefault.jpg"
     st.image(thumb_url, use_container_width=True)
-    st.markdown(f"### {title}")
+    st.markdown(f"""
+    <div style="font-size:1.25rem;font-weight:700;color:#1e1b4b;margin:12px 0;
+                display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
+                overflow:hidden;line-height:1.5;">
+      {title}
+    </div>
+    """, unsafe_allow_html=True)
 
     # 메트릭 카드
     c1, c2, c3, c4 = st.columns(4)
