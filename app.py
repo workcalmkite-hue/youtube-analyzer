@@ -17,7 +17,9 @@ st.markdown("---")
 # ── 사이드바: 설정
 with st.sidebar:
     st.header("⚙️ 설정")
-    api_key = st.secrets.get("YOUTUBE_API_KEY") or st.text_input("YouTube API 키", type="password", placeholder="AIza...")
+    api_key = st.secrets.get("YOUTUBE_API_KEY")
+    if not api_key:
+        api_key = st.text_input("YouTube API 키", type="password", placeholder="AIza...")
     url_input = st.text_input("분석할 영상 URL", placeholder="https://www.youtube.com/watch?v=...")
     top_n = st.slider("💬 상위 댓글 개수", 5, 50, 10)
     max_comments = st.slider("☁️ 워드클라우드용 댓글 수", 100, 500, 200, step=100)
