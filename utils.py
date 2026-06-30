@@ -50,6 +50,16 @@ FONT_PATHS = [
 def get_font():
     return next((p for p in FONT_PATHS if os.path.exists(p)), None)
 
+def set_matplotlib_korean():
+    import matplotlib.pyplot as plt
+    import matplotlib.font_manager as fm
+    font = get_font()
+    if font:
+        fm.fontManager.addfont(font)
+        prop = fm.FontProperties(fname=font)
+        plt.rcParams["font.family"] = prop.get_name()
+    plt.rcParams["axes.unicode_minus"] = False
+
 def base_css():
     st.markdown("""
     <style>

@@ -3,10 +3,11 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
-from utils import get_youtube, extract_video_id, url_sidebar, base_css
+from utils import get_youtube, extract_video_id, url_sidebar, base_css, set_matplotlib_korean
 
 st.set_page_config(page_title="감정 분석", page_icon="😊", layout="centered", initial_sidebar_state="expanded")
 base_css()
+set_matplotlib_korean()
 
 st.markdown("# 😊 댓글 감정 분석")
 st.markdown("---")
