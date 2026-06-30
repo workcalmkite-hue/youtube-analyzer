@@ -11,6 +11,8 @@ st.markdown("# 🖼️ 썸네일 다운로드")
 st.markdown("---")
 
 url, run = url_sidebar("⬇️ 썸네일 불러오기")
+if not run:
+    run = bool(st.session_state.get("yt_url"))
 
 if run:
     video_id = extract_video_id(url)

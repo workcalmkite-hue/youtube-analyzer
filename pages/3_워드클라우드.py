@@ -14,6 +14,8 @@ st.markdown("# ☁️ 댓글 워드클라우드")
 st.markdown("---")
 
 url, run = url_sidebar("☁️ 워드클라우드 생성")
+if not run:
+    run = bool(st.session_state.get("yt_url"))
 
 BASE_STOPWORDS = {
     "이","가","을","를","은","는","에","의","도","로","으로","와","과","이고","이라",

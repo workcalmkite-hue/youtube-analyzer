@@ -10,6 +10,8 @@ st.markdown("# 💬 좋아요 TOP 댓글")
 st.markdown("---")
 
 url, run = url_sidebar("💬 댓글 불러오기")
+if not run:
+    run = bool(st.session_state.get("yt_url"))
 
 with st.sidebar:
     st.markdown("### ⚙️ 옵션")
