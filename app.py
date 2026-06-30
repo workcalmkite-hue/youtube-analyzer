@@ -4,7 +4,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from utils import get_youtube, extract_video_id, fmt_num, url_sidebar, base_css
 
-st.set_page_config(page_title="YouTube 분석기", page_icon="📊", layout="centered")
+st.set_page_config(page_title="YouTube 분석기", page_icon="📊", layout="centered", initial_sidebar_state="expanded")
 base_css()
 
 st.markdown("# 📊 YouTube 영상 분석기")

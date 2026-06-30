@@ -4,7 +4,7 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 from utils import get_youtube, extract_video_id, url_sidebar, base_css
 
-st.set_page_config(page_title="썸네일", page_icon="🖼️", layout="centered")
+st.set_page_config(page_title="썸네일", page_icon="🖼️", layout="centered", initial_sidebar_state="expanded")
 base_css()
 
 st.markdown("# 🖼️ 썸네일 다운로드")

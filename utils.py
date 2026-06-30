@@ -25,13 +25,14 @@ def fmt_num(n):
         return f"{n/10000:.1f}만"
     return f"{n:,}"
 
+DEFAULT_URL = "https://youtu.be/nxzbcaf9xK4?si=lKXxx68J5LprxWaj"
+
 def url_sidebar(button_label="🔍 분석"):
     with st.sidebar:
         st.markdown("### 🔗 영상 URL 입력")
-        default = st.session_state.get("yt_url", "")
+        default = st.session_state.get("yt_url", DEFAULT_URL)
         url = st.text_input(
             "url", value=default,
-            placeholder="https://www.youtube.com/watch?v=...",
             label_visibility="collapsed"
         )
         if url:
